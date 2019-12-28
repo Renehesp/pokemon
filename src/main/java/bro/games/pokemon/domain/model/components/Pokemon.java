@@ -23,7 +23,7 @@ public class Pokemon {
     @Column(name = "pokemon_name")
     private String name;
 
-    private Integer evolution;
+    private String evolution;
 
     private Integer health;
 
@@ -34,6 +34,8 @@ public class Pokemon {
 
     @Column(name = "special_move")
     private String specialMove;
+
+    private Integer rarity;
 
     private String url;
 
@@ -53,11 +55,11 @@ public class Pokemon {
         this.name = name;
     }
 
-    public Integer getEvolution () {
+    public String getEvolution () {
         return evolution;
     }
 
-    public void setEvolution (final Integer evolution) {
+    public void setEvolution (final String evolution) {
         this.evolution = evolution;
     }
 
@@ -99,5 +101,13 @@ public class Pokemon {
 
     public void setUrl (final String url) {
         this.url = url;
+    }
+
+    public Integer getRarity() {
+        return rarity;
+    }
+
+    public void setRarity(Integer rarity) {
+        this.rarity = rarity;
     }
 }
